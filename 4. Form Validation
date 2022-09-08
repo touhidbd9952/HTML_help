@@ -1,0 +1,18 @@
+///// laravel controller////////////////////////////////////////////////////////////////
+$request->validate([
+            'loginid' => 'required|max:255',
+            'password' => 'required|max:12|min:8|confirmpass',
+            'confirmpass' => 'required',
+            'name' => 'required|max:255',
+            'address' => 'required|max:255',
+            'postcode' => 'required|max:255',
+            'country' => 'required|max:255',
+            'email1' => 'required|max:255|email|unique:bookers',
+            'email2' => 'max:255|email|unique:bookers',
+            'phone1' => 'required|max:255|unique:bookers',
+            'phone2' => 'max:255|unique:bookers',
+            'fax' => 'max:255',
+        ]);
+ 
+ 
+ ///////Javascript//////////////////////////////////////////////////////////////////////
